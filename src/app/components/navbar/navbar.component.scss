@@ -1,0 +1,11 @@
+.navbar {
+    transition: all 0.3s ease !important;
+    z-index: 1000 !important;
+  }
+  
+  .blurred-navbar {
+    top: 0px;
+    backdrop-filter: blur(10px) !important;
+    background-color: rgba(255, 255, 255, 0.089) !important; /* Adjust color and opacity as needed */
+  }
+
