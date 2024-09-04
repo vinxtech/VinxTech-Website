@@ -1,21 +1,29 @@
-<nav class="navbar bg-black py-4" 
-[ngClass]="{'blurred-navbar position-sticky': isScrolled}">
-<div class="container">
-    <!-- Search Bar Start -->
-     <div class="col d-flex justify-content-between">
-        <!-- search bar with icon & mobile menu icon-->
-        <div class="col d-flex align-items-center gap-3">
-            <img class="img" src="assets/images/logo.svg" alt="Your Company">
-        </div>
-        <!-- menu icon -->
-        <div class="col-3 d-flex gap-3 justify-content-end">
+<nav class="navbar bg-black py-4" [ngClass]="{'blurred-navbar position-sticky': isScrolled}">
+    <div class="container">
+        <!-- Search Bar Start -->
+        <div class="col d-flex justify-content-between">
+            <!-- search bar with icon & mobile menu icon-->
+            <div class="col d-flex align-items-center gap-3">
+                <img class="img" src="assets/images/logo.svg" alt="Your Company">
+            </div>
+            <!-- menu icon -->
+            <!-- <div class="col-3 d-flex gap-3 justify-content-end">
              <div class="d-flex justify-content-center align-items-center">
                     <div class="">
                         <img class="img" src="assets/images/menu-icon.svg" alt="Your Company">
                     </div>
              </div>
+        </div> -->
+            <div class="lang-btn">
+                <div class="lang pointer" *ngIf="selectedLang =='ar'" (click)="onLangChange('en')">
+                    <img src="assets/images/usa.png" width="30" />
+                </div>
+                <div class="lang pointer" *ngIf="selectedLang =='en'" (click)="onLangChange('ar')">
+                    <img src="assets/images/ksa.png" width="30" />
+                </div>
+            </div>
         </div>
-     </div>
-     <!-- Search Bar End -->
+
+        <!-- Search Bar End -->
     </div>
-    </nav>
+</nav>
