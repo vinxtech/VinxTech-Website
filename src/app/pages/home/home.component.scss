@@ -1,0 +1,63 @@
+// .container-fluid {
+//     background: url('../../../assets/images/wave-background.svg');
+//     background-size: cover; /* Adjust to your preference */
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+
+.space-top {
+    padding-top: 7%;
+}
+
+// animation
+#circle {
+    animation: float 1.5s ease-in-out infinite;
+}
+
+#circle:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#circle:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #circle-1 {
+    animation: infiniteRotate 50s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  #circle-2:nth-child(2) {
+    animation: infiniteRotate 35s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  #circle-3:nth-child(3) {
+    animation: infiniteRotate 20s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  /* Rotation Animation */
+  @keyframes infiniteRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

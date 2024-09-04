@@ -1,0 +1,73 @@
+<div class="container h-75-vh w-100 bg-contact">
+    <div class="row">
+      <!-- ************ Info Start ************ -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-4">
+            <div class="col-12 p-0 c-white">
+              <h2 class="display-5">Get in Touch</h2>
+            </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-10 p-0">
+                <div class="col py-3 c-white"><h6>{{description}}</h6></div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-8 p-0">
+                <div class="col py-1 d-flex justify-content-center align-items-center gap-4 mb-2 c-white" *ngFor="let content of contactInfo">
+                    <div class="glass rounded-circle d-flex justify-content-center align-items-center box p-2"><img [src]='content.photo' alt=""></div>
+                    <div class="col">
+                        <h6>{{content.title}}</h6>
+                        <h6 class="">{{content.subTitle}}</h6>
+                    </div>
+                </div>
+              </div>
+              <!-- ********** Social Icons ********** -->
+              <div class="row mt-4 p-0 gap-2">
+                <div class="col-2 col-sm-2 col-md-2 col-lg-1 py-1 mb-2 c-white" *ngFor="let icons of socialIcons">
+                    <a href=""><div class="glass-btn rounded-circle d-flex justify-content-center align-items-center box p-2"><img [src]='icons.photo' alt=""></div></a>
+                </div>
+              </div>
+          </div>
+      <!-- *********** Form Section *********** -->
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-4">
+              <div class="col-12 p-4 rounded-3 glass">
+                <!-- Form Start -->
+              <form (submit)="sendEmail($event)">
+                <!-- First Row: 2 Inputs -->
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">First Name:</label>
+                    <input type="text" class="form-control glass" id="name" name="name" placeholder="Enter your first name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control glass" id="lastName" name="lastName" placeholder="Enter your last name">
+                  </div>
+                </div>
+          
+                <!-- Second Row: 2 Inputs -->
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control glass" id="email" name="email" placeholder="Enter your email address" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" class="form-control glass" id="phone" name="phone" maxlength="10" pattern="05[0-9]{8}" placeholder="e.g. 05xxxxxxxx" required>
+                  </div>
+                </div>
+          
+                <!-- Last Row: Description Input -->
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <label for="message" class="form-label">Tell us your business requirements:</label>
+                    <textarea class="form-control glass" id="message" rows="4" name="message" placeholder="Example: I need a website to manage client appointments, automate billing, and integrate with social media platforms..."></textarea>
+                  </div>
+                </div>
+                <!-- Submit Button -->
+                 <div class="col">
+                  <button type="submit" class="btn bg-picton w-100">Submit</button>
+                 </div>
+                
+              </form>
+               <!-- Form Section -->
+              </div>
+          </div>
+    </div>
+  </div>

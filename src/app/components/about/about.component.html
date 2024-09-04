@@ -1,0 +1,20 @@
+<div class="container min-vh-100 w-100 d-flex justify-content-center align-items-center position-sticky z-3">
+    <div class="row p-4">
+      <div class="col-12 p-0 c-white">
+        <h2 class="display-4">One platform, <br>infinite possibilities </h2>
+      </div>
+
+      <div class="row gap-5 my-5">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-0 border-top " *ngFor="let info of cardsInfo">
+          <div class="col py-3 c-white"><h4>{{info.title}}</h4></div>
+          <div class="col c-white"><p>{{info.subTitle}}</p></div>
+        </div>
+      </div>
+    
+    <div class="row p-4">
+      <div class="col p-0">
+        <button class="btn glass-btn rounded-pill px-4"  (click)="scrollToBottom()">Get started</button>
+      </div>
+    </div>
+    </div>
+  </div>
