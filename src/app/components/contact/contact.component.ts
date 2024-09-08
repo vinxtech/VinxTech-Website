@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
@@ -7,7 +7,8 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  
   description: string = "We're here to assist you 24/7 via email or live chat. Reach out to us for personalized solutions that meet your business needs."
 
   contactInfo: {photo:string, title:string, subTitle:string} []= [
@@ -15,13 +16,19 @@ export class ContactComponent {
     {photo:'assets/images/pin.svg', title:'Kingdom of Saudi Arabia, Riyadh', subTitle:"Located in the heart of Riyadh"},
     {photo:'assets/images/email.svg', title:'Email', subTitle:'vinxtech@vinxtech.com'},
   ];
-  
+
   socialIcons: {photo:string} []= [
     {photo:'assets/images/facebook.svg'},
     {photo:'assets/images/instagram.svg'},
     {photo:'assets/images/x.svg'},
     {photo:'assets/images/linkedin.svg'}
   ];
+
+  currentYear: number | undefined;
+
+  ngOnInit(): void {
+    this.currentYear = new Date().getFullYear();
+  }
 
   sendEmail(event: Event) {
     event.preventDefault();  // Prevent default form submission
